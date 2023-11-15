@@ -12,8 +12,19 @@ const rimuoviLeggere = function(){
 document.querySelector(".stretched-link").addEventListener("click",rimuoviLeggere)
 
 //3//
-let autori=event.target.querySelectorAll("main .blog-post :nth-child(2) a ");
-      function autore(event) {
-        console.log(event.target.innerText);
-      }
-      autori.addEventListener("click", autore);
+const autore = function(event){
+    alert(event.target.innerText);
+   }
+   
+   const authori = document.querySelectorAll(".blog-post p:first-of-type a");
+   
+   for(let i=0; i<authori.length; i++){
+    authori[i].addEventListener("click",autore);
+   }
+   //4//
+
+   const resta =function(event){
+    alert("baby resta")
+   }
+   const agg =document.querySelector(".text-muted")
+   agg.addEventListener("click",resta)
